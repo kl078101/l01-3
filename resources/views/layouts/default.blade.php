@@ -19,10 +19,15 @@
     @include('layouts._header')
 
     <div class='container'>
-      @yield('content')
+      <div class="offset-md-1 col-md-10">
+        {{-- 提示 --}}
+        @include('shared._messages')
 
-      {{-- 引入尾部 --}}
-      @include('layouts._footer')
+        @yield('content')
+
+        {{-- 引入尾部 --}}
+        @include('layouts._footer')
+      </div>
     </div>
 
 
