@@ -12,9 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+
 // 定义首页的路由
 Route::get('/','StaticPagesController@home')->name('home');
 Route::get('/help','StaticPagesController@help')->name('help');
 Route::get('/about','StaticPagesController@about')->name('about');
 
 Route::get('signup','UsersController@create')->name('signup');
+
+// 注册
+Route::get('signup', 'UsersController@create')->name('signup');
+Route::resource('users', 'UsersController');

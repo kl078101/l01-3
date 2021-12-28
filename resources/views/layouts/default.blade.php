@@ -4,7 +4,7 @@
     <title>@yield('title', '句子鸭鸭') - 句子鸭鸭</title>
 
     {{-- 引入 CSS --}}
-    <link rel="stylesheet" type="text/css" href="style/css/css.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('style/css/css.css')}}" />
 
     {{-- 引入 Bootstrap CDN--}}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
