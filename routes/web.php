@@ -33,3 +33,6 @@ Route::delete('logout', 'SessionsController@destroy')->name('logout');
 
 // 编辑
 Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
+
+// 邮件
+Route::get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');
