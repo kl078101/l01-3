@@ -9,6 +9,8 @@ class Status extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['content'];
+
     // 模型关联
     public function user()
     {
