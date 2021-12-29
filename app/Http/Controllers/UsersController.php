@@ -63,8 +63,13 @@ class UsersController extends Controller
             'password' => bcrypt($request->password),
         ]);
 
-        $this->sendEmailConfirmationTo($user);
-        session()->flash('success', '验证邮件已发送到你的注册邮箱上，请注意查收。');
+        // 正常注册打开
+        // $this->sendEmailConfirmationTo($user);
+        // session()->flash('success', '验证邮件已发送到你的注册邮箱上，请注意查收。');
+        // return redirect('/');
+
+        // 暂停注册
+        session()->flash('success', '不好意思，暂未开放注册哦！！');
         return redirect('/');
     }
 
